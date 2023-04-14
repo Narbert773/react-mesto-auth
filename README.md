@@ -1,7 +1,19 @@
-# Здесь будет ваш проект на Реакте с авторизацией и регистрацией
+# react-mesto-auth
 
-Используйте ваши предыдущие наработки по проекту Mesto. Это может быть работа 11-го спринта или его улучшенная версия после 2-х последних спринтов. 
+Регистрация и авторизация проекта Mesto
 
-Все запросы на авторизацию, регистрацию и проверку токена должны работать через сервис `https://auth.nomoreparties.co`. Остальные запросы, не относящиеся к этой проектной работе могут быть к бэкенду из предыдущих спринтов.
+## Стек технологий:
 
-Успехов!
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+### Этапы работы
+
+   + Создание нужных роуты и описание перенаправления
+   + Верстка новых компонентов (Страница регистрации, страница авторизации)
+   + HOC ProtectedRoute
+   + Подключение основного функционала сайта к бэкенду ЯП
+   + Реализация аутентификации пользователя
+   + Реализация работы с локальным хранилищем и токеном
