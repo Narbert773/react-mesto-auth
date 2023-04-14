@@ -36,15 +36,17 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        Promise.all([api.getUserInformation(), api.getInitialCards()])
-            .then(([userData, cards]) => {
-                setCurrentUser(userData);
-                setCards(cards);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }, [])
+        if (loggedIn) {
+            Promise.all([api.getUserInformation(), api.getInitialCards()])
+                .then(([userData, cards]) => {
+                    setCurrentUser(userData);
+                    setCards(cards);
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+        }
+    }, [loggedIn])
 
     useEffect(() => {
         function handleOverlayClick(evt) {
@@ -101,7 +103,7 @@ function App() {
     }
 
     function tokenCheck() {
-        const token = localStorage.getItem("jwt")
+        const token = localStorage.getItem("token")
         if (token) {
             auth.checkToken(token)
                 .then((res) => {
@@ -128,7 +130,7 @@ function App() {
 
     function handleSingOut() {
         setLoggedIn(false);
-        localStorage.removeItem('jwt');
+        localStorage.removeItem('token');
     }
 
 
