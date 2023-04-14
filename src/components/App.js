@@ -92,7 +92,7 @@ function App() {
                     localStorage.setItem("token", res.token);
                     setLoggedIn(true);
                     setEmail(email);
-                    navigate("/Narbert773/react-mesto-auth")
+                    navigate("/react-mesto-auth")
                 }
             })
             .catch((err) => {
@@ -110,7 +110,7 @@ function App() {
                     if (res) {
                         setLoggedIn(true);
                         setEmail(res.data.email);
-                        navigate("/Narbert773/react-mesto-auth");
+                        navigate("/react-mesto-auth");
                     }
                 })
                 .catch((err) => {
@@ -259,7 +259,7 @@ function App() {
                             </>
                         }
                     />
-                    <Route path="/Narbert773/react-mesto-auth" element={
+                    <Route path="/react-mesto-auth" element={
                         <>
                             <Header
                                 title='Выйти'
